@@ -1,0 +1,56 @@
+{
+  "name": "@antora-supplemental/related-docs",
+  "version": "0.1.0",
+  "description": "Antora extension: link every page to an org's other docs sites (team, partner, public) via a generated registry page; explicit `sites: none` opt-out",
+  "license": "MIT",
+  "author": "Ryan Johnson (https://github.com/AMDphreak)",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/**/*",
+    "README.adoc",
+    "CHANGELOG.adoc",
+    "LICENSE",
+    "antora-registry.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "build:fixture": "antora test/fixture/antora-playbook.yml --to-dir build/fixture"
+  },
+  "keywords": [
+    "antora",
+    "antora-extension",
+    "related-docs",
+    "docs-hub",
+    "navigation"
+  ],
+  "homepage": "https://github.com/antora-supplemental/related-docs",
+  "bugs": {
+    "url": "https://github.com/antora-supplemental/related-docs/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antora-supplemental/related-docs.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "js-yaml": "^4.1.0"
+  },
+  "peerDependencies": {
+    "@antora/site-generator": ">=3.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@antora/site-generator": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "antora": "^3.1.14"
+  },
+  "packageManager": "pnpm@10.33.0"
+}

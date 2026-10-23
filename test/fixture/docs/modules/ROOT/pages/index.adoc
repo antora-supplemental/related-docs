@@ -1,0 +1,7 @@
+= Fixture home
+
+A page about the fixture. Team members should hop to the team docs.
+
+== Section
+
+More text.

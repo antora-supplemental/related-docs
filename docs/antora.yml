@@ -1,0 +1,5 @@
+name: related-docs
+title: Related Docs
+version: ~
+nav:
+  - modules/ROOT/nav.adoc

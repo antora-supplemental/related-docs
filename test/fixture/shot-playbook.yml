@@ -1,0 +1,31 @@
+site:
+  title: Related docs fixture
+  start_page: fixture::index.adoc
+content:
+  sources:
+    - url: ./../..
+      branches: HEAD
+      start_path: test/fixture/docs
+ui:
+  bundle:
+    url: https://github.com/antora-supplemental/valentus-theme/releases/download/v3/ui-bundle.zip
+    snapshot: true
+urls:
+  html_extension_style: indexify
+antora:
+  extensions:
+    - require: ./../../lib/index.js
+      label: Other docs sites (team, partners)
+      sites:
+        - name: Public docs
+          url: https://docs.example.org
+          audience: public
+          description: Product and API docs for everyone
+        - name: Team docs
+          url: https://team.docs.example.org
+          audience: team
+          requires_login: true
+          login_note: GitHub org membership
+        - name: Partner portal
+          url: https://partners.example.org
+          audience: partners

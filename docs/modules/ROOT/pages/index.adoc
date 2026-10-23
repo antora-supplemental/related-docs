@@ -1,0 +1,49 @@
+= Related Docs
+:description: Antora extension that links every page to an org's other docs sites through a generated registry page.
+:page-audience: Docs site maintainer
+:page-usage-context: Extension reference on the antora-supplemental docs hub
+:page-orig-author: Ryan Johnson
+:page-last-author: Grok Bot on behalf of Ryan Johnson
+:page-last-edited: 2026-10-23
+:page-keywords: antora-extension, navigation, docs-hub
+
+Related Docs adds a slim "other docs sites" link to every page and generates a registry page listing each site your org publishes, so a new developer on the public hub can find the team docs.
+
+image::related-docs-top.png[Related-docs link above a page title in the Valentus theme,width=720]
+
+== Configure
+
+[source,yaml]
+----
+antora:
+  extensions:
+    - require: '@antora-supplemental/related-docs'
+      label: Team docs (members only)
+      sites:
+        - name: Team docs
+          url: https://team.docs.example.com
+          audience: team
+          requires_login: true
+----
+
+Each site takes `name`, `url`, `audience`, `description`, `requires_login` and `login_note`. `top` and `footer` toggle the two placements independently.
+
+== Say "no other sites" explicitly
+
+[source,yaml]
+----
+    - require: '@antora-supplemental/related-docs'
+      sites: none
+----
+
+`sites: none` hides the element, skips the registry page and logs nothing. Leaving `sites` out also hides the element but logs one `info` hint, so a missing config never breaks a build yet still gets noticed.
+
+== Generated registry page
+
+The page lands at `<component>::related-docs.adoc`, where the component defaults to the `site.start_page` component. Change it with `index: { component, module, path, title, intro }`, or turn it off with `index: false` and point `link_url` somewhere else.
+
+image::related-docs-index.png[Generated registry page listing three docs sites,width=720]
+
+== Full reference
+
+See the https://github.com/antora-supplemental/related-docs#configuration[README configuration table].
