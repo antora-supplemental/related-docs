@@ -17,7 +17,7 @@
     "antora-registry.md"
   ],
   "scripts": {
-    "test": "node --test test/*.test.js",
+    "test": "node --test",
     "build:fixture": "antora test/fixture/antora-playbook.yml --to-dir build/fixture"
   },
   "keywords": [
