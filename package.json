@@ -1,7 +1,7 @@
 {
   "name": "@antora-supplemental/related-docs",
   "version": "0.1.0",
-  "description": "Antora extension: link every page to an org's other docs sites (team, partner, public) via a generated registry page; explicit `sites: none` opt-out",
+  "description": "Antora extension that links every page to your org's other docs sites (team, partner, public) through a generated registry page.",
   "license": "MIT",
   "author": "Ryan Johnson (https://github.com/AMDphreak)",
   "main": "lib/index.js",

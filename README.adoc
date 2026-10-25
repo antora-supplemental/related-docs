@@ -3,7 +3,9 @@
 :page-orig-author: Ryan Johnson
 :page-last-edited: 2026-10-23
 
-**Related Docs** stops new readers from wandering lost on the wrong docs site. It generates a registry page that lists every docs site your org publishes (public hub, team docs, partner portal, ...) and bakes a slim link to it at the top and/or bottom of every page. Orgs with no other sites say so explicitly with `sites: none`, so the extension can ship in a default stack without showing anything.
+**Related Docs** stops new readers from wandering lost on the wrong docs site. It generates a registry page that lists every docs site your org publishes (public hub, team docs, partner portal, ...) and bakes a slim link to it at the top and/or bottom of every page. It adds no runtime JavaScript.
+
+If your org has no other docs sites, set `sites: none`. The link and the registry page are then left out and nothing is logged, so the extension can ship in a default stack without showing anything. If you leave `sites` out entirely, the link is hidden too, but the build logs one info line that suggests `sites: none`.
 
 Support: support@devcentr.org
 

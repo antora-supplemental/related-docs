@@ -1,6 +1,6 @@
 ---
 name: "Related docs"
-description: "Link every page to an org's other docs sites (team, partner, public) through a generated registry page; explicit `sites: none` opt-out."
+description: "Links every page to your org's other docs sites (team, partner, public) through a generated registry page."
 ---
 
 # Overview

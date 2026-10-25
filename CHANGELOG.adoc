@@ -2,6 +2,8 @@
 
 == Unreleased
 
+* Package description (package.json and `antora-registry.md`) now states only the main behavior in a full sentence. The `sites: none` opt-out moved to the README intro, which the extension registry shows as the full description.
+
 == 0.1.0 - 2026-10-23
 
 * Initial release: generated related-docs registry page, top and footer link elements (independently toggled), `sites: none` explicit opt-out, `directLinkWhenSingle`, `dataFile`, CSS custom properties that follow light/dark themes.
